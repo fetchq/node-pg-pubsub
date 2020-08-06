@@ -33,11 +33,6 @@
     "test:mocha": "NODE_ENV=test nyc --reporter=lcov --reporter text mocha test/**/*.spec.js",
     "test": "run-s check test:*"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm test"
-    }
-  },
   "devDependencies": {
     "@types/chai": "^4.2.8",
     "@types/chai-as-promised": "^7.1.2",
