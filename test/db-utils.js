@@ -9,8 +9,6 @@ const dotEnvFile = process.env.DOTENV_FILE || pathModule.resolve(__dirname, './.
 
 require('dotenv').config({ path: dotEnvFile });
 
-const connectionDetails = process.env.DATABASE_TEST_URL || {
-  database: process.env.PGDATABASE || 'pgpubsub_test'
-};
+const connectionDetails = process.env.DATABASE_TEST_URL || 'postgres://postgres:postgres@localhost/pgpubsub_test';
 
 module.exports = { connectionDetails };

@@ -78,16 +78,43 @@ Creating a `PGPubsub` instance will not do much up front. It will prepare itself
 
 ## Lint / Test
 
-- setup a postgres database to run the integration tests
-  - the easist way to do this is via docker, `docker run -it -p 5432:5432 -e POSTGRES_DB=pgpubsub_test postgres`
-- `npm test`
+### Automate via Make/Docker
 
-For an all-in-one command, try:
-```sh
-# fire up a new DB container, run tests against it, and clean it up!
-docker rm -f pgpubsub_test || true && \
-docker run -itd -p 5432:5432 -e POSTGRES_DB=pgpubsub_test --name pgpubsub_test postgres && \
-npm test && \
-docker rm -f pgpubsub_test
+The easiest way to run tests is via `Makefile` on a Linux compatible environment:
+
+```bash
+make test
 ```
+
+### Manual Execution
+
+In case you want to run the tests manually, you first need to be able to access a PostgreSQL instance. You can do that in 2 ways:
+
+#### Via Docker
+
+```bash
+docker run --rm -it -p 5432:5432 -e \
+POSTGRES_DB=pgpubsub_test -e \
+POSTGRES_PASSWORD=postgres postgres
+```
+
+#### Via Environment File
+
+You can create an _environment file_ in `test/.env`:
+
+```bash
+DATABASE_TEST_URL=postgres://postgres:postgres@localhost:5432/postgres
+
+DATABASE_TEST_URL_INVALID_USER=postgres://invalidUser:postgres@localhost:5432/postgres
+
+DATABASE_TEST_URL_INVALID_PASSWORD=postgres://postgres:invalidPassword@localhost:5432/postgres
+```
+
+Once the PostgreSQL setup is done, you can run the test with your Node environment:
+
+```bash
+npm i
+npm test
+```
+
 

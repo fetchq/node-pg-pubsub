@@ -20,8 +20,8 @@ process.on('unhandledRejection', err => { console.log('Unhandled Rejection:', er
 describe('Pubsub', function () {
   const PGPubsub = require('../../');
 
-  const conStringInvalidUser = process.env.DATABASE_TEST_URL_INVALID_USER || 'postgres://invalidUsername@localhost/pgpubsub_test';
-  const conStringInvalidPassword = process.env.DATABASE_TEST_URL_INVALID_PASSWORD || 'postgres://postgres:invalid@localhost/pgpubsub_test';
+  const conStringInvalidUser = process.env.DATABASE_TEST_URL_INVALID_USER || 'postgres://invalidUsername:postgres@localhost/pgpubsub_test';
+  const conStringInvalidPassword = process.env.DATABASE_TEST_URL_INVALID_PASSWORD || 'postgres://postgres:invalidPassword@localhost/pgpubsub_test';
 
   let pubsubInstance, db;
 
