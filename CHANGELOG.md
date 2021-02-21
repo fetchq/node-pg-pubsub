@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.2
+
+* Updated `pg` to 8.5.1
+* Min node version 12.0.0
+
 ## 0.5.0 (2019-08-10)
 
 * **Breaking change:** Now requires Node.js >=10.x

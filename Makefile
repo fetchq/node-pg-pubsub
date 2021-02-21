@@ -9,5 +9,5 @@ test-run:
 	npm i
 	npm test
 
-test: db test-run cleanup
+test: cleanup db test-run cleanup
 
