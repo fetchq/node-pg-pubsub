@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.3
+
+* Downgrade `promised-retry` to 0.3.0 to do not lose compatibility
+  with Node 10.x
+
 ## 0.7.2
 
 * Updated `pg` to 8.5.1

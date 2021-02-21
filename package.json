@@ -1,6 +1,6 @@
 {
   "name": "@fetchq/pg-pubsub",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "A Publish/Subscribe implementation on top of PostgreSQL NOTIFY/LISTEN",
   "homepage": "http://github.com/voxpelli/node-pg-pubsub",
   "repository": {
@@ -17,11 +17,11 @@
     "@types/pg": "^7.14.10",
     "pg": "^8.5.1",
     "pg-format": "^1.0.4",
-    "promised-retry": "^0.4.0",
+    "promised-retry": "^0.3.0",
     "verror": "^1.10.0"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=10.0.0"
   },
   "main": "index.js",
   "scripts": {
