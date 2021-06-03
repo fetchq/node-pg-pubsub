@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.0
+
+* Bumped `pg` version
+
 ## 0.7.3
 
 * Downgrade `promised-retry` to 0.3.0 to do not lose compatibility
