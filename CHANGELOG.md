@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.0
+
+* Updated dependencies
+
 ## 0.8.0
 
 * Bumped `pg` version
